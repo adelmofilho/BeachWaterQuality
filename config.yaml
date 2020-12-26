@@ -1,0 +1,11 @@
+website: 
+  baseUrl: 'http://balneabilidade.inema.ba.gov.br/index.php/relatoriodebalneabilidade'
+  homeIdx: "boletim"
+  downIdx: "geraBoletim"
+scrapper: "all"
+data:
+  root: "data"
+  raw: "raw"
+  logs: 
+    dir: "logs"
+    file: "logs.json"
