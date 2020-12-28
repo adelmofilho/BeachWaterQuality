@@ -80,9 +80,9 @@ def download_boletim(list_boletins, config, logs_filepath, prefix="boletim"):
     raw_dir = config.get('data').get("subfolder").get('raw')
     
     for boletim in tqdm(list_boletins):
-        sleep(5)
         id_campanha, dicionario = _extract_boletim_info(boletim, logs_filepath)
         if dicionario is not None:
+            sleep(3)
             boletim_url = f"{url}?idcampanha={id_campanha}"
             urlretrieve(boletim_url, f"{root_dir}/{raw_dir}/{prefix}_{id_campanha}.pdf")
             _registry_boletim(dicionario, config, logs_filepath)
